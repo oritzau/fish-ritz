@@ -3,7 +3,7 @@ function openf
     cd $HOME
     set result (fzf)
     if set -q result[1]
-        open $result $argv
+        open $result $argv & disown
     end
     cd $current_dir
 end
